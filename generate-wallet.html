@@ -10625,9 +10625,9 @@ Bitcoin.Util = {
 
 				<div id="backTextControl" style="font-size: 12px;">
                    <div style="float: left; width: 375px; text-align: right;">
-                  Denomination:
+                  単位:
                   <select id="backDenominationSelect" onChange="setDenomination(this.value);">
-                    <option value="">*** None ***</option>
+                    <option value="">*** なし ***</option>
                     <option value="10000 PHR">10000 PHR</option>
                     <option value="5000 PHR">5000 PHR</option>
                     <option value="2000 PHR">2000 PHR</option>
@@ -10649,7 +10649,7 @@ Bitcoin.Util = {
                     <option value="10 yPHR">10 yPHR</option>
                     <option value="5 yPHR">5 yPHR</option>
                     <option value="1 yPHR">1 yPHR</option>
-                    <option value="other">Other...</option>
+                    <option value="other">その他...</option>
                   </select>
                   <div id="backDenominationOther" style="display: none;">
                   <input id="backDenominationOtherAmount" maxlength="5" size="6" value="1" onChange="setDenomination('other');">
@@ -10669,9 +10669,9 @@ Bitcoin.Util = {
                        		var toggleBackCustomMessage = (this.value == 'message' ? 'block' : 'none');
                            document.getElementById('backLongText').style.display=toggleBackLongText;
                            document.getElementById('backCustomMessage').style.display=toggleBackCustomMessage;">
-                            <option value="instructions">Instructions</option>
-                            <option value="message">Write your own...</option>
-                            <option value="">Blank</option>
+                            <option value="instructions">説明書</option>
+                            <option value="message">自分で書く...</option>
+                            <option value="">空欄</option>
                        </select>
 
                         </div>
@@ -10739,33 +10739,34 @@ Bitcoin.Util = {
                         図の点線で示すようにプライベートキーの領域を半分に折り返し、もう一度折り返します。蝶の形は切り取るのに時間がかかりますが、このカットがないとテープを外すことなく<em>他人にプライベートキーを見られてしまいます</em>!</span>
                         <br />
 						<br />
-						<span id="instructions23">The final wallet will be a rectangle shape with the more narrow private key area folded over it.</span>
+						<span id="instructions23">
+最終的なウォレットの形は、プライベートキーの領域が折り畳まれた長方形の形状です。</span>
 						<br />
 
                         <br />
-						<span id="instructions13">Seal your wallet by placing two strips of sturdy <strong>light-blocking</strong> tape over the top and bottom edges of the private (folded) area. A zip-seal bag will keep it safe from moisture, which is especially important when using an inkjet printer.</span>
+						<span id="instructions13">折りたたんだプライベート領域の上端と下端に2本の丈夫な遮光テープを貼りシーリングします。ジップロックは湿気から安全に保ちます。特にインクジェットプリンタを使用する場合に重要です。</span>
 						<br /><br />
-                        <a href="#" onClick="window.open(window.suppliesURL, '_blank'); return false;" class="nicerButton" style="width: 400px;">Purchase hologram stickers and/or zip-sealing bags &raquo;</a>
+                        <a href="#" onClick="window.open(window.suppliesURL, '_blank'); return false;" class="nicerButton" style="width: 400px;">ホログラムステッカー/ジップロックを購入 &raquo;</a>
 
-						<br /><br />
-
-						<h1><span id="instructions16">How to add funds to your wallet:</span></h1>
-
-						<span id="instructions17">Send <script type="text/javascript">document.write(window.currencyName);</script>s to the address (or QR code) where your wallet says "PUBLIC ADDRESS".</span>
 						<br /><br />
 
-						<h1><span id="instructions18">How to withdraw funds from your wallet:</span></h1>
+						<h1><span id="instructions16">ウォレットに資金を追加するには:</span></h1>
 
-						<span id="instructions19">You should expect to withdraw the entire balance of the wallet by importing it (or "sweeping" it) to a live wallet, e.g. a Phore Wallet or Bitcoin wallet application or online service like blockchain.info or coinbase.com.
+						<span id="instructions17"><script type="text/javascript">document.write(window.currencyName);</script>を"アドレス"と書いてあるQR, アドレスへ送金する。</span>
+						<br /><br />
+
+						<h1><span id="instructions18">ウォレットから資金を引き出すには:</span></h1>
+
+						<span id="instructions19">Phoreのウォレットやウォレットアプリケーション・ウェブサービスなどのウォレットへプライベートキーをインポートすることで資金を取り出すことが出来ます。
                         <br />
                         <br />
-                        <strong>If you elected to BIP38-encrypt your wallet</strong>, you may need to recover your unencrypted WIF "Wallet Import Format" private key by using the "validate" tab on this web page.
+												ウォレットをBIP38で暗号化した場合は、このページの"検証"タブを使用して、ウォレットインポート形式のプライベートキーを復元する必要があります。
                         <br />
                         <br />
-						<h1><span id="instructions20">Tips &amp; FAQ's</span></h1>
-                        &bull; <a href="https://bitcoinpaperwallet.com/printing-and-paper-tips/" target="_blank">What kind of printer and paper to use &raquo;</a><br />
-                        &bull; <a href="https://bitcoinpaperwallet.com/wallet-tutorial-add-withdraw-funds/" target="_blank">Adding to and spending from a paper wallet &raquo;</a><br />
-                        &bull; <a href="https://bitcoinpaperwallet.com/bip38-password-encrypted-wallets/" target="_blank">How and when to use BIP38 encryption &raquo;</a><br />
+						<h1><span id="instructions20">よくある質問</span></h1>
+                        &bull; <a href="https://bitcoinpaperwallet.com/printing-and-paper-tips/" target="_blank">プリンター/用紙の種類 &raquo;</a><br />
+                        &bull; <a href="https://bitcoinpaperwallet.com/wallet-tutorial-add-withdraw-funds/" target="_blank">ペーパーウォレットの追加・ウォレットからの支出 &raquo;</a><br />
+                        &bull; <a href="https://bitcoinpaperwallet.com/bip38-password-encrypted-wallets/" target="_blank">BIP38暗号化の使用法 &raquo;</a><br />
 
                         </span>
 
@@ -10789,33 +10790,34 @@ Bitcoin.Util = {
 					</div>
 					<div style="width: 45%; float: left; padding: 0 15px;">
 						<span class="qrinput">
-							<input type="text" id="detailprivkey" value="" placeholder="Enter a private key, or click the QR icon to scan" autocomplete="off" onFocus="this.select();" onKeyPress="if (event.keyCode == 13) ninja.wallets.detailwallet.viewDetails();" />
+							<input type="text" id="detailprivkey" value="" placeholder="プライベートキーを入力するか、QRコードをスキャン" autocomplete="off" onFocus="this.select();" onKeyPress="if (event.keyCode == 13) ninja.wallets.detailwallet.viewDetails();" />
 							<span onClick="ninja.wallets.detailwallet.qrscanner.start()"></span>
 						</span>
 						<div id="paperqrscanner">
 							<div class="background"></div>
 							<div id="mainbody" class="dialog instructionsarea">
 								<p style="float: right;"><a href="https://bitcoinpaperwallet.com/how-to-scan-qr-codes-with-camera/" target="_blank" style="font-family: 'Lucida Console', Monaco, monospace;">ヘルプ / 説明 &raquo;</a></p>
-								<h2>Scan QR code using your camera</h2>
-								<div id="paperqrnotsupported" style="color: red" class="hide">Sorry, but your web browser does not support the HTML5 camera controls. Try using a recent version of Firefox (recommended), Chrome or Opera.</div>
+								<h2>カメラを利用してQRコードをスキャン</h2>
+								<div id="paperqrnotsupported" style="color: red" class="hide">
+申し訳ありませんが、あなたのウェブブラウザはHTML5カメラコントロールをサポートしていません。最新のバージョンのFirefox, Chrome, Operaをお試しください。</div>
 								<div id="paperqrpermissiondenied" style="color: red" class="hide">
-									<p>Permission denied. Your browser should display a message requesting access to your camera. Please click the "Allow" button to enable the camera.</p>
-									<p>If you are using Chrome and you launched this generator by opening the HTML file from your own computer "locally", you may need to launch Chrome from the command line and specify the <a href="https://bitcoinpaperwallet.com/how-to-scan-qr-codes-with-camera/" target="_blank" style="font-family: 'Lucida Console', Monaco, monospace;">--allow-file-access-from-files</a> flag. Or you can set up a local web server (Apache) and run this generator via http://127.0.0.1... or, give up and just use Firefox.</p>
+									<p>権限の問題が発生しました。ブラウザには、カメラへのアクセスを要求するメッセージが表示されるはずです。カメラを有効にするには、[許可]ボタンをクリックしてください。</p>
+									<p>Chromeを使用していて、HTMLファイルをローカルに開くことでジェネレータを起動した場合は、コマンドラインからChromeを起動し<a href="https://bitcoinpaperwallet.com/how-to-scan-qr-codes-with-camera/" target="_blank" style="font-family: 'Lucida Console', Monaco, monospace;">--allow-file-access-from-files</a>フラグを立てましょう。もしくはApacheなどのローカルウェブサーバーを立ち上げるか、http://127.0.0.1 からジェネレータを立ち上げるか、Firefoxを使いましょう。</p>
 
 								</div>
 								<div id="paperqrerror" style="color: red"></div>
 								<div id="paperqroutput"></div>
-								<button onClick="ninja.wallets.detailwallet.qrscanner.stop()">Cancel</button>
+								<button onClick="ninja.wallets.detailwallet.qrscanner.stop()">キャンセル</button>
 							</div>
 						</div>
                         <br />
-						<span><input type="button" id="detailview" value="Validate / Decrypt" onClick="ninja.wallets.detailwallet.viewDetails();" /></span>
+						<span><input type="button" id="detailview" value="検証 / 復号化" onClick="ninja.wallets.detailwallet.viewDetails();" /></span>
 						<div class="row extra">
-							<span><label id="detailkeyformats">Supported formats: WIF, WIFC, HEX, B64, B6, MINI, BIP38, "Brain Wallet"</label></span>
+							<span><label id="detailkeyformats">対応する形式: WIF, WIFC, HEX, B64, B6, MINI, BIP38, "ブレインウォレット"</label></span>
 						</div>
 						<div id="detailbip38commands">
-							This "6P..." private key is BIP38-encrypted.<br />
-							<label id="detaillabelpassphrase">Please type in passphrase below:</label><br />
+							プライベートキー "6P..." はBIP38暗号化されています。<br />
+							<label id="detaillabelpassphrase">下にパスフレーズを入力してください:</label><br />
 							<span><input type="text" id="detailprivkeypassphrase" value="" onFocus="this.select();" onKeyPress="if (event.keyCode == 13) ninja.wallets.detailwallet.viewDetails();" /></span>
 							<span><input type="button" id="detaildecrypt" value="Decrypt BIP38" onClick="ninja.wallets.detailwallet.viewDetails();" /></span>
 						</div>
@@ -10824,53 +10826,54 @@ Bitcoin.Util = {
 
 				<div id="detailkeyarea" class="hide">
 					<div class="notes">
-						<h1>Public and private details for:<br /><span id="detailkeyareakey"></span></h1>
-						<p><button onClick="ninja.wallets.detailwallet.loadInPaperWallet()">Use these details to print a paper wallet</button></p>
-						<span id="detaillabelnote1">Use the <strong>Public Address</strong> to receive funds or check your balance online. The <strong>Private Key WIF</strong> is a code that needs to be keep secret since it can be used to spend any funds that have been sent to the corresponding public key. Keys can be encoded in a number of different formats. The most popular encoding formats (WIF, WIFC, HEX, B64) are shown below.</span>
+						<h1>アドレス・プライベートキーについて:<br /><span id="detailkeyareakey"></span></h1>
+						<p><button onClick="ninja.wallets.detailwallet.loadInPaperWallet()">この情報を使ってウォレットを印刷する</button></p>
+						<span id="detaillabelnote1">
+アドレスを使用して資金を受け取るか、オンラインで残高を確認してください。プライベートキーはウォレットにある資金を使うために秘密にするコードです。プライベートキーは様々な形式でエンコードできます。一般的なエンコード形式（WIF、WIFC、HEX、B64）を以下に示します。</span>
 						<br />
 					</div>
 					<div class="pubqr">
 						<div class="item">
-							<span class="label" id="detaillabelbitcoinaddress"><strong style="font-size: 150%;">Public <script type="text/javascript">document.write(window.currencyName);</script> Address</strong></span>
+							<span class="label" id="detaillabelbitcoinaddress"><strong style="font-size: 150%;"><script type="text/javascript">document.write(window.currencyName);</script>アドレス</strong></span>
 							<div id="detailqrcodepublic" class="qrcode_public"></div>
 							<span class="output" id="detailaddress"></span>
 						</div>
 
 						<div class="item right" style="display:block;" id="compressedpicker">
-						<a href="#" onClick="document.getElementById('compressed1').style.display='block'; document.getElementById('compressed2').style.display='block';  document.getElementById('compressedpicker').style.display='none'; return(false);">Display compressed format keys?</a>
+						<a href="#" onClick="document.getElementById('compressed1').style.display='block'; document.getElementById('compressed2').style.display='block';  document.getElementById('compressedpicker').style.display='none'; return(false);">圧縮された形式のキーを表示しますか？</a>
 						</div>
 
 						<div class="item right" style="display: none;" id="compressed1">
-							<span class="label" id="detaillabelbitcoinaddresscomp"><script type="text/javascript">document.write(window.currencyName);</script> Address Compressed Format</span>
+							<span class="label" id="detaillabelbitcoinaddresscomp"><script type="text/javascript">document.write(window.currencyName);</script>圧縮されたアドレス</span>
 							<div id="detailqrcodepubliccomp" class="qrcode_public"></div>
 							<span class="output" id="detailaddresscomp"></span>
 						</div>
 					</div>
 					<br /><br />
 					<div class="item clear">
-						<span class="label" id="detaillabelpublickey">Public Key (130 characters [0-9A-F]):</span>
+						<span class="label" id="detaillabelpublickey">パブリックキー(130文字 [0-9A-F]):</span>
 						<span class="output pubkeyhex" id="detailpubkey"></span>
 					</div>
 					<div class="item">
-						<span class="label" id="detaillabelpublickeycomp">Public Key (compressed, 66 characters [0-9A-F]):</span>
+						<span class="label" id="detaillabelpublickeycomp">パブリックキー (66文字へ圧縮 [0-9A-F]):</span>
 						<span class="output" id="detailpubkeycomp"></span>
 					</div>
 					<hr />
 					<div class="privqr">
 						<div class="item">
-							<span class="label"><span id="detaillabelprivwif"><strong style="font-size: 150%;">Private Key WIF</strong><br />51 characters base58, starts with a</span> '<script type="text/javascript">document.write(window.window.WIFPrefix);</script>'</span>
+							<span class="label"><span id="detaillabelprivwif"><strong style="font-size: 150%;">ウォレットインポート形式のプライベートキー</strong><br />base58で 51文字, 次の文字から始まります:</span> '<script type="text/javascript">document.write(window.window.WIFPrefix);</script>'</span>
 							<div id="detailqrcodeprivate" class="qrcode_private"></div>
 							<span class="output" id="detailprivwif"></span>
 						</div>
 						<div class="item right" style="display:none;" id="compressed2">
-							<span class="label"><span id="detaillabelprivwifcomp">Private Key WIF Compressed<br />52 characters base58, starts with a</span> '<script type="text/javascript">document.write(window.compressedWIFPrefix);</script>'</span>
+							<span class="label"><span id="detaillabelprivwifcomp">圧縮された(ウォレットインポート形式の)プライベートキー<br />base58, 52文字で, 次の文字から始まります:</span> '<script type="text/javascript">document.write(window.compressedWIFPrefix);</script>'</span>
 							<div id="detailqrcodeprivatecomp" class="qrcode_private"></div>
 							<span class="output" id="detailprivwifcomp"></span>
 						</div>
 					</div>
 					<br /><br />
 					<div class="item clear">
-						<span class="label" id="detaillabelprivhex">Private Key Hexadecimal Format (64 characters [0-9A-F]):</span>
+						<span class="label" id="detaillabelprivhex">16進形式のプライベートキー (64文字 [0-9A-F]):</span>
 						<span class="output" id="detailprivhex"></span>
 					</div>
 					<div class="item">
@@ -10900,24 +10903,24 @@ Bitcoin.Util = {
 		<div id="footer" class="footer">
 			<div class="authorbtc">
 				<div>
-					<span class="item" id="footerlabeldonations"><b>Donations keep this service open &amp; free!</b></span>
+					<span class="item" id="footerlabeldonations"><b>サービスの継続のための寄付をお願いいたします。</b></span>
                     <span class="item" style="font-size: 11px; font-family: 'Courier New', Courier, monospace;">
-                    <strong>Bitcoin</strong>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16NZTDjBQfTzFdBfwaS2JGBkfgTFTVZxAp<br />
-                    <strong>Phore</strong>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PSNp3LDTsvUdrPwV5o5YracEhzAD9ce4aB<br /></span>
+                    <strong>Bitcoin</strong>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1E1NvumZBW76VAVfKymUjhHoyDW7NxRYq6<br />
+                    <strong>Phore</strong>:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PMkEQxuK2g7SjQbK91V9iNwKGVZm9N3M7c<br /></span>
 
 
 				</div>
 			</div>
 
-            	<span class="item"><b>Security</b></span>
-                <span class="item" style="font-size: 90%;">For secure wallet generation, do not print wallets "live" from paper.phore.io<br />Instead, download this generator from GitHub and run the HTML as a "local" file:</span>
+            	<span class="item"><b>セキュリティ</b></span>
+                <span class="item" style="font-size: 90%;">ウォレットのセキュリティのために、paper.phore.io や このサイト から"オンライン"でウォレットを生成するのはおやめください。こちらから"ローカル"にダウンロードし、HTML ファイルを実行し、ウォレットを作成しましょう:</span>
 				<span class="item"><a href="https://github.com/phoreproject/Paper-Wallet" target="_blank" id="footerlabelgithub"><strong>Secure Download</strong> (GitHub ZIP file)</a></span>
 
 
 			</div>
 			<div class="copyright">
-				<span id="footerlabelcopyright2">This software may be modified and redistributed as per the MIT/GPL/BSD/Apache licenses described in the HTML source code. However, the folding paper wallet design itself may not be modified or redistributed for commercial purposes without permission.</span><br />
-				<span id="footerlabelnowarranty"><strong>This software and service is provided with no warranty. Use at your own risk.</strong></span>
+				<span id="footerlabelcopyright2">このソフトウェアは、HTMLソースコードに記述されているMIT / GPL / BSD / Apacheライセンスに従って修正・再配布することができます。ただし、折り畳み式の財布のデザインそのものは、許可なく商業目的で変更または再配布することはできません。</span><br />
+				<span id="footerlabelnowarranty"><strong>このソフトウェアおよびサービスは、保証無しで提供されます。自己責任の範囲内で、予備資金のみで利用してください。</strong></span>
 
 			</div>
 		</div>
@@ -11580,12 +11583,12 @@ ninja.publicKey = {
 			"en": {
 				// javascript alerts or messages
 				"paperlabelbitcoinaddress": "Phore:",
-				"paperlabelprivatekey": "Private Key (Wallet Import Format):",
-				"paperlabelencryptedkey": "Encrypted Private Key (Password required)",
-				"bip38alertpassphraserequired": "Passphrase required for BIP38 key",
-				"detailalertnotvalidprivatekey": "The text you entered is not a valid private key or passphrase.",
-				"detailconfirmsha256": "The text you entered does not appear to be a private " + window.currencyName + " key.\n\nWould you like to use this text as a passphrase and create a private key using its SHA256 hash?\n\nWarning: Choosing an extremely strong passphrase (also known as a \"brain wallet\") is important as all common phrases, words, lyrics etc. are regularly scanned by hackers for bitcoin balances worth stealing.",
-				"bip38alertincorrectpassphrase": "Incorrect passphrase for this encrypted private key.",
+				"paperlabelprivatekey": "プライベートキー(ウォレットインポート形式):",
+				"paperlabelencryptedkey": "暗号化されたプライベートキー(パスワードが必要)",
+				"bip38alertpassphraserequired": "BIP38キーのためにパスワードが必要です",
+				"detailalertnotvalidprivatekey": "入力した文字列は正しいプライベートキー・パスワードではありません。",
+				"detailconfirmsha256": "入力した文字列は" + window.currencyName + "のプライベートキーではないようです。\n\nこのテキストをパスフレーズとして、SHA256ハッシュを使って秘密鍵を作成しますか？\n\n警告：すべての一般的なフレーズ・単語などがハッカーにより攻撃されるので、強力なパスフレーズ(長く複雑)を選択することが重要です。",
+				"bip38alertincorrectpassphrase": "暗号化された秘密鍵のパスフレーズが間違っています。",
 			}
 
 			/* ,
@@ -11938,7 +11941,7 @@ ninja.publicKey = {
 				var half = privateKey.length / 2;
 				document.getElementById("btcencryptedkey" + idPostFix).innerHTML = privateKey;
 				document.getElementById("dupbtcencryptedkey" + idPostFix).innerHTML = privateKey;
-				if (window.designChoice == 'default') document.getElementById("wallettype" + idPostFix).innerHTML = 'BIP38 ENCRYPTED WALLET'; // only add for special designs
+				if (window.designChoice == 'default') document.getElementById("wallettype" + idPostFix).innerHTML = 'BIP38暗号化されたウォレット'; // only add for special designs
 				drawOpts.text['walletImportFormat'] = 'BIP38 ENCRYPTED';
 				drawOpts.color = colors['bip38'];
 			}
@@ -11947,7 +11950,7 @@ ninja.publicKey = {
 				document.getElementById("dupbtcprivwif" + idPostFix).innerHTML = privateKey;
 				document.getElementById("wallettype" + idPostFix).innerHTML = '';
 				drawOpts.color = colors['default'];
-				if (window.designChoice == 'default') document.getElementById("wallettype" + idPostFix).innerHTML = 'PRIVATE KEY WALLET'; // special designs should have this burned into the JPG
+				if (window.designChoice == 'default') document.getElementById("wallettype" + idPostFix).innerHTML = 'プライベートキーウォレット'; // special designs should have this burned into the JPG
 				drawOpts.text['walletImportFormat'] = 'WALLET IMPORT FORMAT';
 			}
 
@@ -13322,7 +13325,7 @@ ninja.publicKey = {
 		var currentZoom = document.getElementById("printerzoom").value;
 		var currentShift = document.getElementById("printershift").value;
 		// first write values onto printable area for reference
-		document.getElementById("calibrationinfo").innerHTML="Zoom: " + currentZoom + " / Horizontal shift: " + currentShift;
+		document.getElementById("calibrationinfo").innerHTML="拡大: " + currentZoom + " /水平シフト: " + currentShift;
 		// now update the @print style accordingly
 		var head = document.getElementsByTagName('head')[0];
 		var printerStyle = document.createElement('style');
@@ -13345,13 +13348,13 @@ ninja.publicKey = {
 		window.landscapeAlert ++;
 		updateCalibrationInfo();
 		if (window.landscapeAlert == 1) {
-			alert ('Important note: Please configure your print settings to LANDSCAPE (wide) orientation.');
+			alert ('重要なお知らせ: 印刷設定を LANDSCAPE (ワイド)方向'に);
 		}
 
 		if (myContext == 'generate') {
 			window.printCounter ++;
 			if (window.printCounter == 2) {
-				alert (" *** WARNING *** WARNING *** WARNING *** \n\nYou are about to print a second wallet with the same set of keys. \n\nUnless you intended to make a backup wallet, cancel this print job and generate a fresh set of keys.");
+				alert (" *** 警告 *** 警告 *** 警告 *** \n\n 同じキーを使って二つ目のウォレットを印刷しようとしています。 \n\nバックアップを作成する場合をの時期、この印刷をキャンセルし新しいキーを作成してください。");
 			}
 		}
 		window.print();
@@ -13362,16 +13365,16 @@ ninja.publicKey = {
 		suppliedKey = suppliedKey.trim(); // in case any spaces or whitespace got pasted in
 		document.getElementById('suppliedPrivateKey').value = suppliedKey;
 		if (!ninja.privateKey.isPrivateKey(suppliedKey)) {
-			var message = 'What you entered does not appear to be a ' + window.currencyName + ' Wallet Import Format (WIF) private key.';
+			var message = 'あなたが入力したものは' + window.currencyName + ' WIF形式ではないようです。';
 			if (suppliedKey == null || suppliedKey.length == 0) {
 				alert(message);
 				return;
 			}
 			if (suppliedKey.length < ninja.wallets.paperwallet.minPassphraseLength) {
-				alert(message + '\n\nIf you would like to use this text as a random data source or "brain wallet" passphrase, please supply a longer input.');
+				alert(message + '\n\nこのテキストをランダムデータもしくはパスフレーズとして使用する場合は、より長い入力を行ってください。');
 				return;
 			}
-			if (confirm(message + '\n\nClick OK to interpret this text as a random data source or "brain wallet" passphrase from which a SHA256 hash and keypair will be computed.')) {
+			if (confirm(message + '\n\nOKをクリックして文章をランダムデータかパスフレーズとして解釈する')) {
 				var wallet = new Bitcoin.ECKey(Crypto.SHA256(suppliedKey, { asBytes: true }));
 				var computedPublicAddress = wallet.getBitcoinAddress();
 				var privateKey = wallet.getBitcoinWalletImportFormat();
@@ -13379,7 +13382,7 @@ ninja.publicKey = {
 			}
 		} else {
 			var computedPublicAddress = new Bitcoin.ECKey(suppliedKey).getBitcoinAddress();
-			alert ('OK! This is a valid WIF-format private key whose public address is:\r\r'+computedPublicAddress);
+			alert ('正しいWIF形式のプライベートキーで、アドレスは:\r\r'+computedPublicAddress);
 			ninja.wallets.paperwallet.buildManual({ address: computedPublicAddress, wifKey: suppliedKey }, document.getElementById('paperpassphrase').value);
 			window.printCounter = 0;
 		}
